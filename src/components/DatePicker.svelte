@@ -108,6 +108,11 @@
     popover.close()
   }
 
+  export function clearHandler () {
+    isDateChosen.set(false)
+    dispatch('clear')
+  }
+
   $: {
     if ($isDateChosen) {
       config.isRangePicker ? setRangeValue() : setDateValue()
