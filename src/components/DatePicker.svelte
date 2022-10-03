@@ -127,10 +127,11 @@
     text-align: center;
     overflow: visible;
     width: var(--datepicker-width);
+    position: relative;
   }
 
   .calendar-button {
-    padding: 10px 20px;
+    padding: 10px 30px 10px 20px;
     border: 1px solid var(--button-border-color);
     display: block;
     text-align: center;
@@ -162,6 +163,39 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .close {
+    position: absolute;
+    right: 5px;
+    top: 20%;
+    bottom: 20%;
+    margin: auto 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+  }
+
+  .close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 15px;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
 
   @media (min-width: 680px) {
     .view {
@@ -210,4 +244,7 @@
       <Toolbar continueText={continueText} on:close={close} />
     </div>
   </Popover>
+  {#if $isDateChosen}
+    <button aria-label="Reset date" class='close' on:click={clearHandler}/>
+  {/if}
 </div>
