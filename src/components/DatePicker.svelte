@@ -23,6 +23,7 @@
   export let night = 19
   export let minuteStep = 5
   export let continueText = 'Continue'
+  export let canClear = true;
 
   const dispatch = createEventDispatcher()
 
@@ -244,7 +245,7 @@
       <Toolbar continueText={continueText} on:close={close} />
     </div>
   </Popover>
-  {#if $isDateChosen}
+  {#if canClear && $isDateChosen}
     <button aria-label="Reset date" class='close' on:click={clearHandler}/>
   {/if}
 </div>
