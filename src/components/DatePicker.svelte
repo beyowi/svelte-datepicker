@@ -132,7 +132,7 @@
   }
 
   .calendar-button {
-    padding: 10px 30px 10px 20px;
+    padding: var(--button-padding);
     border: 1px solid var(--button-border-color);
     display: block;
     text-align: center;
@@ -141,8 +141,8 @@
     cursor: pointer;
     background: var(--button-background-color);
     color: var(--button-text-color);
-    border-radius: 7px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    border-radius: var(--button-radius);
+    box-shadow: var(--button-box-shadow);
   }
 
   *,

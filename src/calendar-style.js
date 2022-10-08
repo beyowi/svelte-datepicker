@@ -9,6 +9,9 @@ class CalendarStyle {
     this.buttonWidth = '300px'
     this.highlightColor = '#f7901e'
     this.passiveHighlightColor = '#FCD9B1'
+    this.buttonRadius = '7px'
+    this.buttonBoxShadow = '0px 0px 3px rgba(0, 0, 0, 0.1)'
+    this.buttonPadding = '10px 30px 10px 20px'
 
     this.dayBackgroundColor = 'none'
     this.dayBackgroundColorIsNight = 'none'
@@ -52,6 +55,9 @@ class CalendarStyle {
       --button-width: ${this.buttonWidth};
       --highlight-color: ${this.highlightColor};
       --passive-highlight-color: ${this.passiveHighlightColor};
+      --button-radius: ${this.buttonRadius};
+      --button-box-shadow: ${this.buttonBoxShadow};
+      --button-padding: ${this.buttonPadding};
 
       --day-background-color: ${this.dayBackgroundColor};
       --day-background-color-is-night: ${this.dayBackgroundColorIsNight};
