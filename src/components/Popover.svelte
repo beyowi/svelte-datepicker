@@ -17,6 +17,7 @@
   let translateX = 0
 
   export let trigger
+  export let mobileTopOffset
 
   export function close () {
     isClosing.set(true)
@@ -54,7 +55,7 @@
     resetView()
 
     await tick()
-    const { top, left, fullscreen } = getPosition(window, e, config)
+    const { top, left, fullscreen } = getPosition(window, e, config, mobileTopOffset)
     isFullscreen = fullscreen
 
     translateY = top

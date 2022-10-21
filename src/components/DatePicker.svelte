@@ -24,6 +24,7 @@
   export let minuteStep = 5
   export let continueText = 'Continue'
   export let canClear = true;
+  export let mobileTopOffset = 0;
 
   const dispatch = createEventDispatcher()
 
@@ -213,6 +214,7 @@
   style={styling.toWrapperStyle()}>
   <Popover
     {trigger}
+    {mobileTopOffset}
     bind:this={popover}
     on:opened={initialisePicker}
     on:closed={() => dispatch('close')}>

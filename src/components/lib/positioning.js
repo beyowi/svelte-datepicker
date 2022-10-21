@@ -42,7 +42,7 @@ const dimensions = {
   },
 };
 
-function getPosition(w, e, config) {
+function getPosition(w, e, config, mobileTopOffset) {
   const { isRangePicker } = config;
   const { pageWidth, viewportHeight, viewportWidth } = sizes(w);
 
@@ -57,7 +57,7 @@ function getPosition(w, e, config) {
   ) {
     return {
       fullscreen: true,
-      top: 100,
+      top: mobileTopOffset,
       left: 0,
     };
   }
